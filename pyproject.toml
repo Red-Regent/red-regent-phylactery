@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "red-regnant-phylactery"
+version = "0.1.0"
+authors = [
+  { name="HFO Port 4", email="your_tuta_email@tuta.com" }
+]
+description = "A local SQLite MAP-Elites memory manager to prevent AI agent context collapse (OOM errors)."
+readme = "README.md"
+requires-python = ">=3.9"
+keywords = ["llm", "agents", "memory", "map-elites", "sqlite", "oom", "context-collapse"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "numpy>=1.21.0",
+    "tiktoken>=0.3.0",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "mypy>=1.0", "ruff>=0.3"]
+
+[project.urls]
+Homepage   = "https://pypi.org/project/red-regnant-phylactery/"
+
+[tool.setuptools.packages.find]
+where = ["src"]
